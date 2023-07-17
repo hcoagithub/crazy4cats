@@ -1,0 +1,22 @@
+<div id="<%= dom_id aventura %>">
+
+  <div class="card text-center">
+    <div class="card-header">
+      <h5 class="card-title"><%= aventura.titulo %></h5>
+    </div>
+    <div class="card-body">
+      
+      <p class="card-text"><strong>Descripcion:</strong>
+      <%= aventura.descripcion %></p>
+    </div>
+    <div class="card-footer text-body-secondary">
+      <strong>Fecha:</strong>
+      <%= aventura.fecha.strftime("%d de %B") %>
+
+      <div>
+        <%= render 'reactions/option' %>
+      </div>
+    </div>
+  </div>
+
+</div>

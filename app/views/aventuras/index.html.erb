@@ -1,0 +1,23 @@
+
+<h1>Aventuras</h1>
+
+
+<div id="aventuras" class="row d-flex justify-content-around w-100">
+
+  <% @aventuras.each do |aventura| %>
+
+    <div class="col-md-3 m-1">
+      <div class="card">
+        <%= image_tag aventura.imagen, class:"card-img-top w-auto", alt:"..." %>
+        <div class="card-body">
+        <h5 class="card-title"><%= aventura.titulo %></h5>
+        <p class="card-text"><%= aventura.descripcion %></p>
+        <%= link_to "Show this aventura", aventura, class:'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+
+  <% end %>
+</div>
+
+

@@ -1,0 +1,24 @@
+<%= form_with(model: @comentario, local: true) do |f| %>
+    <% if @comentario.errors.any? %>
+        <div id = 'error_explanation'>
+            <h2>Este comentario no se pudo crear por las siguientes
+            razones</h2>
+            <ul>
+                <% @comentario.errors.full_messages.each do |msg|%>
+                    <li><%= msg %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <%= f.hidden_field :aventura_id, value: @aventura.id %>
+    <div class = 'field'>
+        <%= f.label :contenido, as: "Contenido" %>
+
+        <%= f.text_field :contenido %>
+    </div>
+    <div class = 'actions'>
+        <%= f.submit %>
+    </div>
+<% end %>
+    

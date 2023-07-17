@@ -1,0 +1,9 @@
+<div class="form-group d-flex justify-content-between">
+    <% Reaction.kinds.each do |kind| %>
+        <% if kind == 'like' %>
+            <%= button_to "#{kind}", user_reaction_path(aventura_id: @aventura.id, kind: kind), class:'btn btn-success', method: :post %>
+        <% else %>
+            <%= button_to "#{kind}", user_reaction_path(aventura_id: @aventura.id, kind: kind), class:'btn btn-danger', method: :post %>
+        <% end %>
+    <% end %>
+</div>

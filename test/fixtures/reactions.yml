@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  aventura: one
+  user: one
+  kind: MyString
+  reaction_type: MyString
+  comentario: one
+
+two:
+  aventura: two
+  user: two
+  kind: MyString
+  reaction_type: MyString
+  comentario: two

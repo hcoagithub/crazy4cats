@@ -1,0 +1,12 @@
+<h1>Aventuras con reacciones</h1>
+<ul>
+ <% @aventuras.each do |aventura| %>
+    <li>
+        <%= aventura.titulo %> -
+        <%= aventura.find_kind_user_relation(current_user) %>
+    <p>
+        <%= link_to "Show this aventura", aventura %>
+    </p>
+    </li>
+ <% end %>
+</ul>
